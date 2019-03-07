@@ -1,0 +1,22 @@
+#container {
+    width:500px;
+    background-color: black;
+    margin: 0 auto;
+}
+#container > div {
+    width:75%;
+}
+div {
+    width:75%;
+    background-color: rgb(255, 0, 0);
+}
+div.first {
+    background-color: rgb(0, 255, 0);
+}
+div.second {
+    background-color: yellow;
+    transition: all 1s linear;
+}
+div.second:hover {
+    height:300px;
+}
