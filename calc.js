@@ -17,28 +17,80 @@ const fields = [
     {txt:'Display',col:'1/5', row:1},
 ];
 
-const init = () => {
+let clearFlag = false;
+let memory = 0;
+let op = 0;
 
-    const container = document.createElement('div');
-    container.id='container'
+const handleClick =ev => {
+        const disp = document.getElementById('display');
+        const key  = ev.target.textContent;
+        switch(key)
+        {
+            case 'C':
+                disp.textContent = 0;
+                memory = 0;
+                op = 0;
+                break;
+
+                case '+':
+                case '-':
+                if (op === 0){
+                    memory = parseFloat(disp.textContent);
+                }
+                else {
+                    memory += op * parseFloat(disp.textContent);
+                }
+                op = key === '+' ? 1 : -1;
+                clearFlag=true;
+                break;
+
+                case '=':
+                if (op === 0){
+                    memory = parseFloat(disp.textContent);
+                }
+                else {
+                    memory += op * parseFloat(disp.textContent);
+                }
+                disp.textContent = memory;
+                op = 0;
+
+                break;
+
+
+            default:
+                if (key === '0' && disp.textContent === '0') return;
+                if (key === '.' && disp.textContent.includes('.')) return;
+                if ((key === '.' && disp.textContent === '0') || clearFlag) {
+                    disp.textContent = key;
+                    clearFlag=false;
+                }
+                else {
+                    disp.textContent += key;
+                }
+        }
+    };
+
+const init = () => {
+    const container =document.createElement('div');
+    container.id='container';
+
 
     fields.forEach(el => {
-        const button = document.createElement('div')
-        button.textContent = el.txt;
-        button.style.gridColumn = el.col;
-        button.style.gridRow = el.row;
-        if(el.txt === 'Display'){
+        const button=document.createElement('div');
+        button.textContent=el.txt;
+        button.style.gridColumn=el.col;
+        button.style.gridRow=el.row;
+        if (el.txt==='Display')
+        {
             button.id='display';
-        } else {
-            button.addEventListener('click',ev => {
-                const d = document.getElementById('display');
-                d.textContent = ev.target.textContent;
-                ev.target.textContent='#';
-            });
+            button.textContent='0';
         }
+        else{
+            button.addEventListener('click', handleClick);
+        } 
         container.appendChild(button);
+
     });
     document.body.appendChild(container);
 }
-
-window.addEventListener('DOMContentLoaded', init);
+window.addEventListener('DOMContentLoaded',init);
