@@ -9,107 +9,90 @@ html, body {
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
     width: 50%;
     height:80%;
-    background-color: grey;
+    background-color:green;
     margin: 20px auto 0;
 }
 #container div > {
 background-color: aqua;
-font: normal 28pt sans-serif;
-display: flex;
 }
 #container > div:hover {
     background-color: aqua;
-    color:blue;
+    transition-duration: 0.5s;
     }
 #container > div:nth-child(1){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(2){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(3){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(4){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(5){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(6){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(7){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(8){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(9){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(10){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(12){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(11){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(13){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(14){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(15){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
 }
 #container > div:nth-child(16){
     display: flex;
