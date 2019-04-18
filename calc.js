@@ -17,7 +17,7 @@ const fields = [
     {txt:'Display',col:'1/5', row:1},
 ];
 
-let clearFlag = false;
+let clearFlag = true;
 let memory = 0;
 let op = 0;
 
